@@ -1,0 +1,328 @@
+.Contatos{
+    padding: 10px 0;
+    text-align: center;
+ }
+
+ h1{
+    text-align: center; /*Centraliza o texto.*/
+    font-size: 150%; /*Define o tamanho da fonte como 150% do tamanho padrão.*/
+ }
+ 
+ h2{
+    font-family: 'Times New Roman', Times, serif; /*Define a fonte como 'Times New Roman'*/
+    font-size: 130%; /*Aumenta o tamanho da fonte para 130% do tamanho padrão.*/
+ }
+
+ body{
+    background-color: antiquewhite; /*Define a cor de fundo de toda a página como "antiquewhite" */
+ }
+
+ /* Estilo do menu de navegação */
+nav {
+    background-color: rgba(136, 90, 53, 0.881); /*Aplica uma cor de fundo em um tom marrom*/
+    padding: 10px 0; /*Adiciona 10px de padding acima e abaixo do conteúdo do menu.*/
+}
+
+/* Estiliza a lista de itens dentro da navegação */
+nav ul {
+    list-style-type: none; /* Remove os marcadores (bolinhas) dos itens da lista.*/
+    margin: 0; /*Remove as margens e o preenchimento padrão.*/
+    padding: 0; /*Remove as margens e o preenchimento padrão.*/
+    display: flex; /*Faz com que os itens da lista sejam exibidos em linha (horizontalmente).*/
+    justify-content: center; /*Centraliza os itens da lista dentro do contêiner.*/
+}
+
+/*Estiliza cada item da lista*/
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px; /* Adiciona 15px de espaço entre os itens da lista. */
+}
+
+/* Estiliza os links de navegação dentro de cada item de lista */
+nav ul li a {
+    color: white; /* Define a cor do texto do link como branca.*/
+    text-decoration: none; /* Remove o sublinhado padrão dos links.*/
+    font-size: 18px; /* Define o tamanho da fonte para os links.*/
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do link, tornando-o mais clicável.*/
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s; /* Aplica uma transição suave de 0,3 segundos na mudança de cor.*/
+}
+
+/*Estiliza os links quando o usuário passa o mouse sobre eles (hover)*/
+nav ul li a:hover {
+    color: #df4060;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #333; /* Define um fundo escuro para o submenu. */
+    box-shadow: 0px 8px 16px 0px rgb(222, 111, 115);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px; /*Define a largura mínima do submenu.*/
+    padding: 0; /* Remove o padding do submenu.*/
+}
+
+nav ul li .dropdown-content li {
+    margin: 0; 
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block; /* Torna o submenu visível.*/
+}
+/* Estilo geral do footer */ 
+footer {
+    background-color: rgba(136, 90, 53, 0.881); /* Aplica a cor desejada como fundo */
+    color: white; /*  Define a cor do texto como branco.*/
+    padding: 40px 0; /*  Adiciona 40px de padding no topo e na parte inferior do rodapé.*/
+    font-family: Arial, sans-serif; /* Define a fonte como Arial, com fallback para sans-serif*/
+} 
+/* Cria um contêiner para organizar o conteúdo do rodapé */
+.footer-container {
+    display: flex; /* Exibe os elementos filhos em linha.*/
+    justify-content: space-between; /* Distribui as seções de forma igual, com espaço entre elas.*/
+    flex-wrap: wrap; /* Permite que os elementos se movam para a linha seguinte caso o espaço não seja suficiente.*/
+    max-width: 1200px; /* Limita a largura máxima do contêiner.*/
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente.*/
+    padding: 0 20px; /* Adiciona 20px de padding nas laterais.*/
+}
+/* Estiliza as seções dentro do rodapé*/
+.footer-section { 
+    flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+    margin-bottom: 20px; /* Adiciona 20px de margem na parte inferior das seções.*/
+}
+/* Estiliza os títulos dentro das seções do rodapé.*/
+.footer-section h4 { 
+    margin-bottom: 15px; 
+    font-size: 18px; 
+    color: rgb(255, 164, 167);
+}
+/* Estiliza as listas dentro das seções do rodapé */
+.footer-section p, .footer-section ul {
+    margin: 0 ; 
+    padding: 0; 
+    line-height: 1.6; /* Define a altura da linha do texto como 1.6 vezes o tamanho da fonte, tornando o texto mais espaçado verticalmente.*/
+}
+/* Estiliza as listas dentro das seções do rodapé.*/
+.footer-section ul {
+    list-style-type: none; /* Remove os marcadores da lista. */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;  /* Adiciona um espaço de 10 pixels abaixo de cada item de lista */
+}
+/* Estiliza para Links Dentro das Listas do Rodapé*/
+.footer-section ul li a {
+    color: white; /* Define a cor do texto dos links dentro dos itens de lista como branca.*/
+    text-decoration: none; /* Remove o sublinhado dos links.*/
+    transition: color 0.3s; /* Aplica uma transição suave de 0.3 segundos para a mudança de cor quando o link é interagido.*/
+}
+.footer-section ul li a:hover {
+    color: #ff6347; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+/* Estilos para Links de Redes Sociais*/
+.social-links a { 
+    display: inline-block; /* Faz os links de redes sociais se comportarem como blocos, mas alinhados na mesma linha (sem quebra de linha).*/
+    margin-right: 10px; /* Adiciona um espaço de 10px à direita de cada link de rede social.*/
+    color: white; /* Define a cor dos links como branca.*/
+    text-decoration: none; /* Remove o sublinhado dos links.*/
+    transition: color 0.3s; /* Aplica uma transição suave de 0.3 segundos na mudança de cor do link.*/
+}
+.social-links a:hover {
+    color: #ff6347; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+/* Estilos para a Parte Inferior do Rodapé */
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 10px 0; 
+    border-top: 1px solid #444; /*Adiciona uma borda superior de 1px de espessura e cor cinza escuro (#444).*/
+    font-size: 14px;
+}
+.footer-bottom p {
+    margin: 0; /* Remove a margem padrão do parágrafo dentro do rodapé inferior.*/
+}
+/* Estiliza os textos escritos em h1*/
+h1{
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Aplica margens e padding zerados para todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para a Seção "Sobre"*/
+
+
+.container {
+    display: flex; /* Usa o modelo de layout flexbox */
+    align-items: center; /* Alinha verticalmente a imagem e o texto no centro */
+    gap: 20px; /* Define o espaçamento entre a imagem e o texto */
+}
+
+.entrega {
+    width: 100px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Opcional: arredonda as bordas da imagem */
+}
+
+.auralogo {
+    width: 100px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Opcional: arredonda as bordas da imagem */
+}
+
+.texto {
+    font-size: 16px; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilização dos Ícones de Redes Sociais */
+.socialContainer {
+    width: 30px; /* Define a largura e altura dos ícones de redes sociais para 30px.*/
+    height: 30px; /* Define a largura e altura dos ícones de redes sociais para 30px.*/
+    background-color: rgb(222, 111, 115); /* Define a cor de fundo inicial*/ 
+    /* Organiza o conteúdo do ícone com Flexbox, centralizando o conteúdo tanto vertical quanto horizontalmente. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites da área definida */
+    transition-duration: .3s; /* Define uma transição suave de 0.3 segundos para qualquer alteração no estilo.*/
+  }
+  /* Efeitos de Hover e Atividade nos Ícones */
+
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976; /*  Muda a cor de fundo do ícone para a cor correspondente à rede social ao passar o mouse sobre o ícone.*/
+    transition-duration: .3s; /* Aplica uma transição suave de 0.3 segundos quando a cor de fundo do ícone muda.*/
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  /* facebook*/
+  .containerFive:hover {
+      background-color: #0072b1;
+      transition-duration: .3s;
+    }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  /* Animação para os Ícones de Redes Sociais */
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both; /* Aplica uma animação no ícone de rede social quando o mouse passa sobre ele. */
+  }
+  /* Define a animação que faz com que o ícone se mova de cima para baixo enquanto a opacidade aumenta.*/
+  /* Começa com uma posição deslocada (50px acima) e opacidade 0, e termina na posição original com opacidade total.*/
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* Layout dos Cards */
+  .cards{
+    display: flex;
+    flex-direction:row; /* Define que os itens dentro de .cards serão dispostos horizontalmente (lado a lado).*/
+    height: 300px;
+    width: 97%;
+    margin: auto;
+  }
+
+.card {
+    background-color: white;
+    border: 1px solid #090101d3;
+    border-radius: 15px; /* Arredonda os cantos dos cards */
+    padding: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.429); /* Adiciona uma sombra para dar um efeito de elevação */
+    flex: 5; /* Permite que os cards cresçam igualmente */
+    max-width: 200px; /* Define uma largura máxima para os cards */
+    margin: 30px; /* Coloca o card para o meio automaticamente*/
+}
+
+.container {
+    display: flex; /* Define o contêiner como um flexbox */
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+    width: 97%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.video-container {
+    display: flex; /* Usa flexbox para organizar os vídeos */
+    justify-content: space-evenly;  /* Adiciona espaçamento entre os vídeos */
+    gap: 10px; /* Espaço entre os vídeos */
+  }
+  
+  video {
+    border: 2px solid #000; /* Opcional: borda nos vídeos */
+    border-radius: 8px; /* Opcional: bordas arredondadas */
+  }
+
+  /* Estilização para o Botão */
+  button {
+    padding: 1.0em 3em; /* Define o espaçamento interno do botão*/
+    font-size: 10px; /* Define o tamanho da fonte do botão como 10 pixels.*/
+    text-transform: uppercase; /* Transforma o texto do botão para maiúsculas.*/
+    letter-spacing: 2.5px;  /* Aumenta o espaçamento entre as letras do texto para 2.5 pixels.*/
+    font-weight: 500; /* Define o peso da fonte como 500, um valor intermediário (não muito leve nem muito grosso).*/
+    color: #000; /* Define a cor do texto */
+    background-color: antiquewhite; /* Define a cor de fundo do botão*/
+    border: none; /* Remove a borda padrão do botão.*/
+    border-radius: 45px; /* Define o arredondamento nas bordas*/
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave abaixo do botão*/
+    transition: all 0.3s ease 0s;  /* Aplica uma transição suave em todas as propriedades do botão */
+    cursor: pointer;  /* Define o cursor como "mãozinha" ao passar sobre o botão, indicando que é clicável.*/
+    outline: none; /* Remove o contorno do botão quando ele é focado.*/
+  }
+  
+  button:hover {
+    background-color: rgb(222, 111, 115); /* Muda a cor de fundo para um tom de rosa claro quando o botão é hovered.*/
+    box-shadow: 0px 15px 20px rgb(255, 164, 167); /* Aplica uma sombra mais pronunciada e mais distante, com uma cor de rosa claro.*/
+    color: #fff; /* Altera a cor do texto para branco ao passar o mouse sobre o botão.*/
+    transform: translateY(-7px); /* Move o botão para cima 7 pixels, criando um efeito de elevação ao passar o mouse.*/
+  }
+  
+  button:active {
+    transform: translateY(-1px); /* Quando o botão é clicado, ele se move ligeiramente para cima*/
+  }
+  

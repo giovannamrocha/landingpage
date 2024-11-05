@@ -1,0 +1,385 @@
+/*Estilo do menu de navegação*/
+nav{
+    background-color: burlywood; /*Cor de fundo do menu*/
+    padding: 20px 0; /*Esoaçamento interno*/
+ }
+
+ nav ul{
+    list-style: none; /*Remove as bolinhas padrõ da lista*/
+    margin: 0;
+    padding: 0;
+    display: flex; /*Faz com que os itens fiquem lado a lado(horizontal)*/
+    justify-content: center; /*Centraliza os itens horizontalmente*/
+ }
+
+ nav ul li{
+    margin: 0 15px; /*Espaçamento entre os itens do menu*/
+ }
+
+ nav ul li a{
+    color: white; /*Cor do texto dos links*/
+    text-decoration: none; /*Remove o sublinhado dos links*/
+    font-size: 18px; /*Tamanho da fonte*/
+    transition: color 0.3s; /*Transição suave para a mudança de cor*/
+ }
+
+ nav ul li a:hover{
+    color: black; /*Cor do texto ao passar o mouse(hover)*/
+ }
+
+ .Contatos{
+    padding: 10px 0;
+    text-align: center;
+ }
+
+ h1{
+    text-align: center;
+    font-size: 150%;
+ }
+ 
+ h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+ }
+
+ body{
+    background-color: antiquewhite;
+ }
+
+ /* Estilo do menu de navegação */
+nav {
+    background-color: rgba(136, 90, 53, 0.881);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #df4060;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgb(222, 111, 115);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+/* Estilo geral do footer */ 
+footer {
+    background-color: rgba(136, 90, 53, 0.881); 
+    color: white; 
+    padding: 40px 0; 
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+.footer-section { 
+    flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+    margin-bottom: 20px;
+}
+.footer-section h4 { 
+    margin-bottom: 15px; 
+    font-size: 18px; 
+    color: rgb(255, 164, 167);
+}
+.footer-section p, .footer-section ul {
+    margin: 0 ; 
+    padding: 0; 
+    line-height: 1.6;
+}
+.footer-section ul {
+    list-style-type: none;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    color: #ff6347;
+}
+.social-links a { 
+    display: inline-block; 
+    margin-right: 10px; 
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #ff6347;
+}
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 10px 0; 
+    border-top: 1px solid #444; 
+    font-size: 14px;
+}
+.footer-bottom p {
+    margin: 0;
+}
+.cards{
+    background-color: rgb(226, 214, 196);
+    border: 1px solid #090101d3;
+    border-radius: 15px; /* Arredonda os cantos dos cards */
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.429); /* Adiciona uma sombra para dar um efeito de elevação */
+    flex: 10; /* Permite que os cards cresçam igualmente */
+    max-width: 400px; /* Define uma largura máxima para os cards */
+}
+
+main {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    /*Estiliza a tabela do carrinho*/
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px aolid #ddd;
+    }
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    /*Estiliza o input de quantidade*/
+    input.quantidade {
+        width: 50px;
+        padding: 5px;
+        text-align: center;
+    }
+    /*Estiliza o botão de remover*/ 
+    
+    button.remover-produto {
+         background-color: #e74c3c;
+         color: white;
+         border: none;
+         padding: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         background-color: #c0392b;
+    }
+    /*Estiliza o total final*/
+    .total-final{
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .total-final h3 {
+        color: #333;
+    }
+    #total-final {
+        color: #e74c3c;
+    }
+    button.remover-produto:hover {
+        background-color: #ef3950;
+    }
+
+    button {
+        padding: 1.0em 3em;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: antiquewhite;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+      }
+      
+      button:hover {
+        background-color: rgb(222, 111, 115);
+        box-shadow: 0px 15px 20px rgb(255, 164, 167);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      
+      button:active {
+        transform: translateY(-1px);
+      }
+
+      /* for all social containers*/
+.socialContainer {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(222, 111, 115);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s; /*Define a duração da transição para mudanças de estilo.*/
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  /* Facebook*/
+  .containerFive:hover {
+      background-color: #0072b1;
+      transition-duration: .3s;
+    }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Estiliza o botão que leva para a página do carrinho(sacolinha)*/
+  .btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .btn-cart::after {
+    content: attr(data-quantity); /*Cria um conteúdo gerado a partir do atributo data-quantity do elemento. 
+    Isso significa que ele vai exibir o valor desse atributo, geralmente usado para mostrar a quantidade 
+    de itens no carrinho.*/
+    width: fit-content;
+    height: fit-content;
+    position: absolute; /*Posiciona o elemento de forma absoluta em relação ao seu contêiner*/
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0; /*Inicialmente, o elemento é invisível.*/
+    visibility: hidden; /*O elemento não ocupa espaço na página, mesmo que esteja invisível.*/
+    transition: .2s linear; /*Define uma animação suave para as mudanças de propriedades (neste caso, para opacidade e posição).*/
+    top: 115%; /*Posiciona o elemento abaixo do botão original.*/
+  }
+  
+  /*Define as dimensões do ícone do carrinho e seu tempo de transição.*/
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  /*Define a cor de preenchimento do caminho do ícone, que é branco e sua transição.*/
+  .icon-cart path {
+    fill: rgb(255, 255, 255);
+    transition: .2s linear;
+  }
+  
+  /*Ao passar o mouse sobre o botão, o ícone aumenta de tamanho em 20%.*/
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+
+  /*Altera a cor de preenchimento do ícone para um tom de rosa quando o botão é hovered.*/
+  .btn-cart:hover > .icon-cart path {
+    fill: rgb(222, 111, 115);
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible; /*Torna o elemento visível quando o botão é hovered.*/
+    opacity: 10; /*Faz o elemento totalmente opaco (visível).*/
+    top: 105%; /*Move o elemento um pouco para cima quando visível.*/
+  }
+  
+  .quantity {
+    display: none; /*Oculta qualquer elemento com a classe quantity, não ocupando espaço na página.*/
+  }

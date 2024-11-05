@@ -1,0 +1,566 @@
+.Contatos{
+    padding: 10px 0;
+    text-align: center;
+ }
+
+ h1{
+    text-align: center; /*Centraliza o texto.*/
+    font-size: 150%; /*Define o tamanho da fonte como 150% do tamanho padrão.*/
+ }
+ 
+ h2{
+    font-family: 'Times New Roman', Times, serif; /*Define a fonte como 'Times New Roman'*/
+    font-size: 130%; /*Aumenta o tamanho da fonte para 130% do tamanho padrão.*/
+ }
+
+ body{
+    background-color: antiquewhite; /*Define a cor de fundo de toda a página como "antiquewhite" */
+ }
+
+ /* Estilo do menu de navegação */
+nav {
+    background-color: rgba(136, 90, 53, 0.881); /*Aplica uma cor de fundo em um tom marrom*/
+    padding: 10px 0; /*Adiciona 10px de padding acima e abaixo do conteúdo do menu.*/
+}
+
+/* Estiliza a lista de itens dentro da navegação */
+nav ul {
+    list-style-type: none; /* Remove os marcadores (bolinhas) dos itens da lista.*/
+    margin: 0; /*Remove as margens e o preenchimento padrão.*/
+    padding: 0; /*Remove as margens e o preenchimento padrão.*/
+    display: flex; /*Faz com que os itens da lista sejam exibidos em linha (horizontalmente).*/
+    justify-content: center; /*Centraliza os itens da lista dentro do contêiner.*/
+}
+
+/*Estiliza cada item da lista*/
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px; /* Adiciona 15px de espaço entre os itens da lista. */
+}
+
+/* Estiliza os links de navegação dentro de cada item de lista */
+nav ul li a {
+    color: white; /* Define a cor do texto do link como branca.*/
+    text-decoration: none; /* Remove o sublinhado padrão dos links.*/
+    font-size: 18px; /* Define o tamanho da fonte para os links.*/
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do link, tornando-o mais clicável.*/
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s; /* Aplica uma transição suave de 0,3 segundos na mudança de cor.*/
+}
+
+/*Estiliza os links quando o usuário passa o mouse sobre eles (hover)*/
+nav ul li a:hover {
+    color: #df4060;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #333; /* Define um fundo escuro para o submenu. */
+    box-shadow: 0px 8px 16px 0px rgb(222, 111, 115);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px; /*Define a largura mínima do submenu.*/
+    padding: 0; /* Remove o padding do submenu.*/
+}
+
+nav ul li .dropdown-content li {
+    margin: 0; 
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block; /* Torna o submenu visível.*/
+}
+/* Estilo geral do footer */ 
+footer {
+    background-color: rgba(136, 90, 53, 0.881); /* Aplica a cor desejada como fundo */
+    color: white; /*  Define a cor do texto como branco.*/
+    padding: 40px 0; /*  Adiciona 40px de padding no topo e na parte inferior do rodapé.*/
+    font-family: Arial, sans-serif; /* Define a fonte como Arial, com fallback para sans-serif*/
+} 
+/* Cria um contêiner para organizar o conteúdo do rodapé */
+.footer-container {
+    display: flex; /* Exibe os elementos filhos em linha.*/
+    justify-content: space-between; /* Distribui as seções de forma igual, com espaço entre elas.*/
+    flex-wrap: wrap; /* Permite que os elementos se movam para a linha seguinte caso o espaço não seja suficiente.*/
+    max-width: 1200px; /* Limita a largura máxima do contêiner.*/
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente.*/
+    padding: 0 20px; /* Adiciona 20px de padding nas laterais.*/
+}
+/* Estiliza as seções dentro do rodapé*/
+.footer-section { 
+    flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+    margin-bottom: 20px; /* Adiciona 20px de margem na parte inferior das seções.*/
+}
+/* Estiliza os títulos dentro das seções do rodapé.*/
+.footer-section h4 { 
+    margin-bottom: 15px; 
+    font-size: 18px; 
+    color: rgb(255, 164, 167);
+}
+/* Estiliza as listas dentro das seções do rodapé */
+.footer-section p, .footer-section ul {
+    margin: 0 ; 
+    padding: 0; 
+    line-height: 1.6; /* Define a altura da linha do texto como 1.6 vezes o tamanho da fonte, tornando o texto mais espaçado verticalmente.*/
+}
+/* Estiliza as listas dentro das seções do rodapé.*/
+.footer-section ul {
+    list-style-type: none; /* Remove os marcadores da lista. */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;  /* Adiciona um espaço de 10 pixels abaixo de cada item de lista */
+}
+/* Estiliza para Links Dentro das Listas do Rodapé*/
+.footer-section ul li a {
+    color: white; /* Define a cor do texto dos links dentro dos itens de lista como branca.*/
+    text-decoration: none; /* Remove o sublinhado dos links.*/
+    transition: color 0.3s; /* Aplica uma transição suave de 0.3 segundos para a mudança de cor quando o link é interagido.*/
+}
+.footer-section ul li a:hover {
+    color: #ff6347; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+/* Estilos para Links de Redes Sociais*/
+.social-links a { 
+    display: inline-block; /* Faz os links de redes sociais se comportarem como blocos, mas alinhados na mesma linha (sem quebra de linha).*/
+    margin-right: 10px; /* Adiciona um espaço de 10px à direita de cada link de rede social.*/
+    color: white; /* Define a cor dos links como branca.*/
+    text-decoration: none; /* Remove o sublinhado dos links.*/
+    transition: color 0.3s; /* Aplica uma transição suave de 0.3 segundos na mudança de cor do link.*/
+}
+.social-links a:hover {
+    color: #ff6347; /* Muda a cor do link quando o mouse passa sobre ele */
+}
+/* Estilos para a Parte Inferior do Rodapé */
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 10px 0; 
+    border-top: 1px solid #444; /*Adiciona uma borda superior de 1px de espessura e cor cinza escuro (#444).*/
+    font-size: 14px;
+}
+.footer-bottom p {
+    margin: 0; /* Remove a margem padrão do parágrafo dentro do rodapé inferior.*/
+}
+/* Estiliza os textos escritos em h1*/
+h1{
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Aplica margens e padding zerados para todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para a Seção "Sobre"*/
+.Sobre{
+    display: flex; /* Exibe a foto e o texto lado a lado */
+    align-items: center; /* Alinha a foto e o texto verticalmente */
+}
+
+/* Estilização dos Ícones de Redes Sociais */
+.socialContainer {
+    width: 30px; /* Define a largura e altura dos ícones de redes sociais para 30px.*/
+    height: 30px; /* Define a largura e altura dos ícones de redes sociais para 30px.*/
+    background-color: rgb(222, 111, 115); /* Define a cor de fundo inicial*/ 
+    /* Organiza o conteúdo do ícone com Flexbox, centralizando o conteúdo tanto vertical quanto horizontalmente. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites da área definida */
+    transition-duration: .3s; /* Define uma transição suave de 0.3 segundos para qualquer alteração no estilo.*/
+  }
+  /* Efeitos de Hover e Atividade nos Ícones */
+
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976; /*  Muda a cor de fundo do ícone para a cor correspondente à rede social ao passar o mouse sobre o ícone.*/
+    transition-duration: .3s; /* Aplica uma transição suave de 0.3 segundos quando a cor de fundo do ícone muda.*/
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  /* facebook*/
+  .containerFive:hover {
+      background-color: #0072b1;
+      transition-duration: .3s;
+    }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  /* Animação para os Ícones de Redes Sociais */
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both; /* Aplica uma animação no ícone de rede social quando o mouse passa sobre ele. */
+  }
+  /* Define a animação que faz com que o ícone se mova de cima para baixo enquanto a opacidade aumenta.*/
+  /* Começa com uma posição deslocada (50px acima) e opacidade 0, e termina na posição original com opacidade total.*/
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.slider {
+    width: 100%; 
+    max-width: 650px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: static; /
+}
+
+.slides {
+    display: flex; 
+    width: 100%; 
+    animation: slideAnimation 9s infinite; 
+}
+
+.slide {
+    width: 100%; 
+    flex-shrink: 0; 
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); } 
+    33% { transform: translateX(-100%); } 
+    66% { transform: translateX(-200%); } 
+    100% { transform: translateX(0); } 
+}
+
+
+.slide img {
+    width: 100%; 
+    display: block; 
+}
+
+h1{
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Aplica margens e padding zerados para todos os elementos e define o box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estiliza os rótulos (labels) dos selects */
+label {
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito para o texto */
+}
+
+/* Estiliza os campos de seleção (selects) */
+select {
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Borda cinza clara */
+}
+
+.Sobre{
+    display: flex; /* Exibe a foto e o texto lado a lado */
+    align-items: center; /* Alinha a foto e o texto verticalmente */
+}
+/* Estilização para o Botão */
+  button {
+        padding: 1.0em 3em; /* Define o espaçamento interno do botão*/
+        font-size: 10px; /* Define o tamanho da fonte do botão como 10 pixels.*/
+        text-transform: uppercase; /* Transforma o texto do botão para maiúsculas.*/
+        letter-spacing: 2.5px;  /* Aumenta o espaçamento entre as letras do texto para 2.5 pixels.*/
+        font-weight: 500; /* Define o peso da fonte como 500, um valor intermediário (não muito leve nem muito grosso).*/
+        color: #000; /* Define a cor do texto */
+        background-color: antiquewhite; /* Define a cor de fundo do botão*/
+        border: none; /* Remove a borda padrão do botão.*/
+        border-radius: 45px; /* Define o arredondamento nas bordas*/
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave abaixo do botão*/
+        transition: all 0.3s ease 0s;  /* Aplica uma transição suave em todas as propriedades do botão */
+        cursor: pointer;  /* Define o cursor como "mãozinha" ao passar sobre o botão, indicando que é clicável.*/
+        outline: none; /* Remove o contorno do botão quando ele é focado.*/
+      }
+      
+      button:hover {
+        background-color: rgb(222, 111, 115); /* Muda a cor de fundo para um tom de rosa claro quando o botão é hovered.*/
+        box-shadow: 0px 15px 20px rgb(255, 164, 167); /* Aplica uma sombra mais pronunciada e mais distante, com uma cor de rosa claro.*/
+        color: #fff; /* Altera a cor do texto para branco ao passar o mouse sobre o botão.*/
+        transform: translateY(-7px); /* Move o botão para cima 7 pixels, criando um efeito de elevação ao passar o mouse.*/
+      }
+      
+      button:active {
+        transform: translateY(-1px); /* Quando o botão é clicado, ele se move ligeiramente para cima*/
+      }
+      
+      /* Estilos para Cards */
+    .cards{
+        background-color: rgb(226, 214, 196);
+        border: 1px solid #090101d3;
+        border-radius: 15px; /* Arredonda os cantos dos cards */
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.429); /* Adiciona uma sombra para dar um efeito de elevação */
+        flex: 10; /* Permite que os cards cresçam igualmente */
+        max-width: 400px; /* Define uma largura máxima para os cards */
+    }
+    
+    main {
+        background-color: antiquewhite;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estiliza a tabela do carrinho */
+        table {
+            width: 100%;  /* Faz com que a tabela ocupe toda a largura disponível do contêiner pai. */
+            border-collapse: collapse;  /* Remove os espaços entre as bordas das células da tabela.*/
+            margin-bottom: 20px;   /* Adiciona um espaço de 20px abaixo da tabela.*/
+        }
+        th, td {
+            padding: 10px;  /* Adiciona um espaço de 10px dentro de cada célula*/
+            text-align: center;  /* Centraliza o conteúdo dentro das células.*/
+            border-bottom: 1px aolid #ddd;   /* Adiciona uma borda fina de 1px no fundo das células.*/
+        }
+        th {
+            background-color: #f4f4f4;  /*Define a cor de fundo do cabeçalho da tabela*/
+            font-weight: bold;  /* Deixa o texto do cabeçalho em negrito. */
+        }
+        /*Estiliza o input de quantidade*/
+        input.quantidade {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+        }
+        /*Estiliza o botão de remover*/ 
+        button.remover-produto {
+             background-color: #e74c3c; /* Define a cor de fundo do botão*/ 
+             color: white; /* Define a cor do texto como branco.*/ 
+             border: none; /* Remove a borda padrão do botão.*/ 
+             padding: 10px; /* Adiciona 10px de padding interno no botão.*/ 
+             border-radius: 5px; /* Cria bordas arredondadas de 5px.*/ 
+             cursor: pointer; /* Define o cursor como "mãozinha" ao passar o mouse sobre o botão*/ 
+             background-color: #c0392b; /* Define uma cor de fundo mais escura quando o botão está em seu estado normal.*/ 
+        }
+        /*Estiliza o total final*/
+        .total-final{
+          text-align: right;
+          margin-top: 20px;
+        }
+
+        .total-final h3 {
+            color: #333;
+        }
+        #total-final {
+            color: #e74c3c;
+        }
+        button.remover-produto:hover {
+            background-color: #ef3950;
+        }
+
+        /* Estilos para o Botão de Carrinho*/
+        .btn-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent; /* Torna o fundo do botão transparente.*/
+            position: relative; /* Define a posição do botão como relativa, para que outros elementos possam ser posicionados em relação a ele.*/
+        }
+
+        /* Usado para exibir a quantidade de itens no carrinho.*/
+        .btn-cart::after {
+            content: attr(data-quantity); /* Obtém o valor do atributo data-quantity e o exibe */
+            width: fit-content; /* A largura do pseudo-elemento será ajustada ao conteúdo */
+            height: fit-content; /* A altura do pseudo-elemento será ajustada ao conteúdo */
+            position: absolute; /* Posiciona o pseudo-elemento de forma absoluta em relação ao .btn-cart */
+            font-size: 15px; /* Define o tamanho da fonte */
+            color: white; /* Define a cor do texto como branco */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            opacity: 0; /* Define a opacidade inicial como 0, ou seja, invisível */
+            visibility: hidden; /* Torna o pseudo-elemento invisível */
+            transition: .2s linear; /*Define uma transição suave de 0.2 segundos para a visibilidade e opacidade */
+            top: 115%; /* Posiciona o pseudo-elemento 115% da altura do botão acima do botão */
+        }
+        /* Seletor é para o ícone do carrinho de compras dentro do botão*/
+        .icon-cart {
+            width: 24.38px; /* Define a largura do ícone */
+            height: 30.52px; /* Define a altura do ícone */
+            transition: .2s linear; /* Aplica uma transição suave de 0.2 segundos ao ícone */
+        } 
+        /* Seletor estiliza a cor do caminho dentro do ícone SVG (que representa o carrinho) ao passar o mouse.*/
+        .icon-cart path {
+             fill: rgb(255, 255, 255); /* Define a cor inicial do ícone como branco */
+            transition: .2s linear; /* Aplica uma transição suave de 0.2 segundos na cor do ícone */
+        }
+        /* Aplica uma transformação no ícone do carrinho quando o botão .btn-cart é hovered.*/
+        .btn-cart:hover > .icon-cart {
+            transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% */
+        }
+        /* Aplica uma mudança de cor no ícone do carrinho quando o botão .btn-cart é hovered.*/
+        .btn-cart:hover > .icon-cart path {
+             fill: rgb(222, 111, 115); /* Muda a cor do ícone para um tom de rosa claro quando hovered */
+        }
+  
+        .btn-cart:hover::after {
+            visibility: visible; /* Torna o pseudo-elemento visível */
+            opacity: 10; /* Aumenta a opacidade para 100% */
+            top: 105%; /* Move o pseudo-elemento para 5% abaixo da posição original */
+        }
+  
+        .quantity {
+            display: none; /* Esconde o elemento */
+        }
+
+  .container {
+    display: flex; /* Define o contêiner como um flexbox */
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+    width: 1150px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card{
+    position: relative;
+    padding: 10px;
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    border: 1px solid #090101d3;
+    border-radius: 15px; /* Arredonda os cantos dos cards */
+    transition: 0.5s;
+    text-align: center;
+}
+/* Aplica uma transição suave de 0.5 segundos para qualquer alteração no estilo da imagem */
+.container .card .img{
+    transition: 0.5s;
+}
+/* Define o estilo do conteúdo dentro do cartão, com 10px de preenchimento e texto centralizado */
+.container .card .content{
+    padding: 10px;
+    text-align: center;
+}
+/* Define a cor do texto do parágrafo dentro do conteúdo do cartão e aplica 
+uma transição suave de 0.5 segundos */
+.container .card .content p{
+    color: #ff6347;
+    transition: 0.5s;
+}
+/* Estiliza o link dentro do conteúdo do cartão:
+   - Define um fundo preto, bordas arredondadas e padding
+   - Adiciona uma transição suave de 0.5 segundos e margem superior de 20px */
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: 0.5s;
+    outline: none;
+    margin-top: 20px;
+}
+
+.container .card:hover{
+    background-color:#575757; /* Cor de fundo quando hovered */
+    color: antiquewhite; /* Cor do texto quando hovered */
+    margin-top: -30px; /* Move o cartão para cima quando hovered */
+    box-shadow: 2px 20px 25px rgb(113, 57, 36); /* Aplica uma sombra ao redor do cartão */
+}
+/* Quando o cartão é hoverizado, muda a cor do texto no parágrafo para branco */
+.container .card:hover p{
+    color: white;
+}
+/* Quando o cartão é hoverizado, muda a cor do texto no título (<h1>) para branco */
+.container .card:hover h1{
+    color: white;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #090101d3;
+    border-radius: 15px; /* Arredonda os cantos dos cards */
+    padding: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.429); /* Adiciona uma sombra para dar um efeito de elevação */
+    flex: 5; /* Permite que os cards cresçam igualmente */
+    max-width: 200px; /* Define uma largura máxima para os cards */
+}
+
+/* Container da galeria usando Flexbox */
+.gallery-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se não couberem */
+    padding: 20px;
+    width: 80%;
+    margin: auto; /*coloca o container para o meio automaticamente*/
+}
+/* Quando o mouse passa sobre o container da galeria, a opacidade dos itens da galeria é reduzida*/
+.gallery-container:hover .gallery-item{
+    opacity: .6;
+}
+/* Quando o mouse passa sobre um item da galeria, a opacidade do item é restaurada para totalmente visível */
+.gallery-container .gallery-item:hover {
+    opacity: 1
+}
+/* Estiliza cada item da galeria */
+.gallery-item {
+    margin: 10px; /* Define uma margem de 10px ao redor de cada item */
+    border: 2px solid rgba(136, 90, 53, 0.881);  /* Aplica uma borda com cor e opacidade específicas */
+    border-radius: 5px; /* Arredonda os cantos do item */
+    overflow: hidden; /* Garante que o conteúdo que ultrapassar os limites do item seja ocultado */
+    width: 250px; /* Define uma largura fixa para cada item */
+    transition: all .3s;  /* Aplica uma transição suave de 0.3 segundos para qualquer alteração no estilo */
+}
+/* Quando o mouse passa sobre o item da galeria, ele se move para cima (efeito de elevação) */
+.gallery-item:hover{
+    transform: translateY(-20px) /* Move o item 20px para cima quando o mouse passa sobre ele */
+}
+
+/* Estilos para as imagens */
+.gallery-item img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+  
